@@ -8,22 +8,161 @@
  *
  * @author Paqui Elena
  */
-public class Vivienda 
-{
-    double precio;
-    int numHabitaciones;
-    double superficie;
-    boolean parking;
-    String estado;
-    String propietario;
-    
-    public Vivienda (double precio)
-    {
+public class Vivienda {
+
+    private double precio;
+    private int numHabitaciones;
+    private double superficie;
+    private boolean parking;
+    private String estado;
+    private String propietario;
+
+    /**
+     *
+     * @param precio
+     */
+    public Vivienda(double precio) {
         this.precio = precio;
     }
-    
-    public void actualizarPrecio()
-    {
-        precio = precio - precio * 0.05;
+    //sobrecarga de contructor con parametros
+
+    /**
+     *
+     * @param precio
+     * @param numhabitaciones
+     * @param superficie
+     * @param parking
+     * @param estado
+     * @param propietario
+     */
+    public Vivienda(double precio, int numhabitaciones, double superficie, boolean parking, String estado, String propietario){
+    this.precio=precio;
+    this.numHabitaciones=numhabitaciones;
+    this.superficie=superficie;
+    this.parking=parking;
+    this.estado=estado;
+    this.propietario=propietario;
     }
+//metodo para porcentaje descuento
+
+    /**
+     *
+     * @param descuento
+     */
+    public void actualizarPrecio(double descuento) {
+       
+        precio = precio - ((descuento*100)/precio);
+    }
+//metodo para imprimir valores de la vivienda
+
+    /**
+     *
+     */
+    public void imprimirVivienda() {
+        System.out.println("Precio: " + this.precio);
+        System.out.println("Número de habitaciones: " + this.numHabitaciones);
+        System.out.println("Superficie en m2: " + this.superficie);
+        System.out.println("¿Dispone de parking?: " + this.parking);
+        System.out.println("Estado: " + this.estado);
+        System.out.println("Propietario: " + this.propietario);
+
+    }
+//---------------------------getters y setters
+
+    /**
+     *
+     * @return
+     */
+    public double getPrecio() {
+        return precio;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getNumHabitaciones() {
+        return numHabitaciones;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public double getSuperficie() {
+        return superficie;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public boolean isParking() {
+        return parking;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getEstado() {
+        return estado;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getPropietario() {
+        return propietario;
+    }
+
+    /**
+     *
+     * @param precio
+     */
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    /**
+     *
+     * @param numHabitaciones
+     */
+    public void setNumHabitaciones(int numHabitaciones) {
+        this.numHabitaciones = numHabitaciones;
+    }
+
+    /**
+     *
+     * @param superficie
+     */
+    public void setSuperficie(double superficie) {
+        this.superficie = superficie;
+    }
+
+    /**
+     *
+     * @param parking
+     */
+    public void setParking(boolean parking) {
+        this.parking = parking;
+    }
+
+    /**
+     *
+     * @param estado
+     */
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    /**
+     *
+     * @param propietario
+     */
+    public void setPropietario(String propietario) {
+        this.propietario = propietario;
+    }
+
 }
