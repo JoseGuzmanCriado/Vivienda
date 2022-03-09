@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Paqui Elena
+ * @author Jose Guzman
  */
 public class Vivienda {
 
@@ -52,18 +52,6 @@ public class Vivienda {
     public void actualizarPrecio(double descuento) {
        
         precio = precio - ((descuento*100)/precio);
-    }
-//metodo para imprimir valores de la vivienda
-
-  
-    public void imprimirVivienda() {
-        System.out.println("Precio: " + this.precio);
-        System.out.println("Número de habitaciones: " + this.numHabitaciones);
-        System.out.println("Superficie en m2: " + this.superficie);
-        System.out.println("¿Dispone de parking?: " + this.parking);
-        System.out.println("Estado: " + this.estado);
-        System.out.println("Propietario: " + this.propietario);
-
     }
 //getters y setters
 
