@@ -18,16 +18,16 @@ public class Vivienda {
     private String propietario;
 
     /**
-     *
+     * contructor con precio  por parametro
      * @param precio
      */
     public Vivienda(double precio) {
         this.precio = precio;
     }
-    //sobrecarga de contructor con parametros
+    
 
     /**
-     *
+     * metodo constructor con parametros
      * @param precio
      * @param numhabitaciones
      * @param superficie
@@ -35,28 +35,28 @@ public class Vivienda {
      * @param estado
      * @param propietario
      */
-    public Vivienda(double precio, int numhabitaciones, double superficie, boolean parking, String estado, String propietario){
-    this.precio=precio;
-    this.numHabitaciones=numhabitaciones;
-    this.superficie=superficie;
-    this.parking=parking;
-    this.estado=estado;
-    this.propietario=propietario;
+    public Vivienda(double precio, int numhabitaciones, double superficie, boolean parking, String estado, String propietario) {
+        this.precio = precio;
+        this.numHabitaciones = numhabitaciones;
+        this.superficie = superficie;
+        this.parking = parking;
+        this.estado = estado;
+        this.propietario = propietario;
     }
 //metodo para porcentaje descuento
 
     /**
-     *
+     *calulo de descueto
      * @param descuento
      */
     public void actualizarPrecio(double descuento) {
-       
-        precio = precio - ((descuento*100)/precio);
+
+        precio = precio - ((descuento * 100) / precio);
     }
 //getters y setters
 
     /**
-     *
+     *devuelve el precio
      * @return
      */
     public double getPrecio() {
@@ -64,7 +64,7 @@ public class Vivienda {
     }
 
     /**
-     *
+     * devuelve la cantidad de habitaciones
      * @return
      */
     public int getNumHabitaciones() {
@@ -72,7 +72,7 @@ public class Vivienda {
     }
 
     /**
-     *
+     *devuelve la superficie
      * @return
      */
     public double getSuperficie() {
@@ -80,7 +80,7 @@ public class Vivienda {
     }
 
     /**
-     *
+     * devuelve el parking
      * @return
      */
     public boolean isParking() {
@@ -88,7 +88,7 @@ public class Vivienda {
     }
 
     /**
-     *
+     *devuelve el estado
      * @return
      */
     public String getEstado() {
@@ -96,7 +96,7 @@ public class Vivienda {
     }
 
     /**
-     *
+     * devuelve el propietario
      * @return
      */
     public String getPropietario() {

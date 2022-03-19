@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Paqui Elena
+ * @author Jose Guzman
  */
 public class Hogar {
 
@@ -22,10 +22,15 @@ public class Hogar {
         boolean parking;
         String estado;
         String propietario;
-        
-        
-        
 
+        ImprimirVivienda(casa1);
+    }
+
+    /**
+     * metodo que devuele los valores de la casa en string
+     * @param casa1
+     */
+    public static void ImprimirVivienda(Vivienda casa1) {
         System.out.println("Precio: " + casa1.getPrecio());
         System.out.println("Número de habitaciones: " + casa1.getNumHabitaciones());
         System.out.println("Superficie en m2: " + casa1.getSuperficie());
